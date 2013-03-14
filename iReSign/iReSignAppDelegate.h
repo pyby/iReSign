@@ -32,13 +32,16 @@
     IBOutlet IRTextFieldDrag *provisioningPathField;
     IBOutlet IRTextFieldDrag *certField;
     IBOutlet IRTextFieldDrag *bundleIDField;
+    IBOutlet IRTextFieldDrag *bundleVersionField;
+    IBOutlet IRTextFieldDrag *bundleShortVersionField;
     IBOutlet NSButton    *browseButton;
     IBOutlet NSButton    *provisioningBrowseButton;
     IBOutlet NSButton    *resignButton;
     IBOutlet NSTextField *statusLabel;
     IBOutlet NSProgressIndicator *flurry;
     IBOutlet NSButton *changeBundleIDCheckbox;
-    
+    IBOutlet NSButton *changeBundleVersionCheckbox;
+    IBOutlet NSButton *changeBundleShortVersionCheckbox;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -50,6 +53,8 @@
 - (IBAction)provisioningBrowse:(id)sender;
 - (IBAction)showHelp:(id)sender;
 - (IBAction)changeBundleIDPressed:(id)sender;
+- (IBAction)changeBundleVersionFPressed:(id)sender;
+- (IBAction)changeBundleShortVersionPressed:(id)sender;
 
 - (void)checkUnzip:(NSTimer *)timer;
 - (void)doProvisioning;
